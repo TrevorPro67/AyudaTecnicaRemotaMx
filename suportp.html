@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Soporte Presencial</title>
+    
+        <link rel="stylesheet" href="sp.css">
+</head>
+<body>
+    <h1>Soporte Presencial</h1>
+    
+<div class="parent">
+    <div class="div1">
+    <p>El soporte presencial es un servicio de atención directa que se brinda cara a cara entre el personal de la empresa y el cliente o usuario, en un lugar físico establecido. A diferencia de la atención telefónica o digital, este modelo se basa en la interacción humana inmediata, donde se resuelven dudas, se reciben productos o residuos, y se ofrece asesoría en tiempo real.</p>
+ <button onclick="enviarTarea('Armar PC 100%', 7)" id="epecial">Ensamblado de pc</button></div>
+ <div class="div2">    <button onclick="enviarTarea('Cambio de componentes', 7)">Cambio de componentes</button>
+    <button onclick="enviarTarea('Formatear laptop', 3)">Formatear laptop</button></div>
+    <div class="div3"><button onclick="enviarTarea('mantenimiento preventivo', 3)">mantenimiento preventivo</button>
+    <button onclick="enviarTarea('cambio de pasta térmica',1)">cambio de pasta térmica</button></div>
+</div>
+<script>
+    
+    function enviarTarea(nombre, dias) {
+        const tarea = {
+            texto: nombre,
+            dias: dias,
+            id: Date.now()
+        };
+        localStorage.setItem('tareaNueva', JSON.stringify(tarea));
+        alert(`Enviado: ${nombre} con ${dias} días`);
+    }
+</script>
+
+<div class="parent2">
+        <div class="div5">
+            <p>Si usted requiere ver nuestra agenda de trabajos, puede ir aquí</p>
+            <a href="agenda-1.html" target="_blank">Agenda</a>
+        </div>
+        <div class="div6">
+            <p>en caso de preferir soporte a distancia puede ir con el siguiente boton.</p>
+        <a href="suportd.html" target="_blank">Soporte a distancia</a>
+    </div>
+</div>
+    <img src="img/Logo.png" id="Logo">
+        <h3 id="subtit">"Tu equipo funciona, nosotros nos encargamos"</h3>
+</body>
+</html>
